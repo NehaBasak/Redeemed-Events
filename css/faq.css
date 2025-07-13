@@ -199,18 +199,227 @@ h2 > span {
 }
 
 /* Accordion Section */
-.accordion-section h4{
-    font-size: 26px;
-    color: var(--third-clr);
-    font-family: Open Sans;
-    padding-right: 15px;
+.accordion-section {
+  padding-bottom: 80px;
 }
-.accordion-section p{
-    font-size: 20px;
-    color: var(--forth-clr);
+.accordion-item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.accordion-item:hover {
+  transform: translateY(-5px);
+}
+.accordion-button {
+  background-color: var(--secondary-clr) !important;
+  font-weight: 500;
+  padding: 1rem;
+  position: relative;
+}
+.accordion-button > p {
+  color: var(--forth-clr);
+  font-family: Coustard;
+  font-weight: normal;
+  font-size: 20px;
+}
+.accordion-button::after {
+  content: "➤" !important;
+  font-size: 18px;
+  color: var(--third-clr);
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg) !important;
+}
+.accordion-button span {
+  color: #fcbf49;
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: Open Sans;
+  font-size: 24px;
+}
+.accordion-body {
+  background-color: var(--secondary-clr);
+  color: var(--forth-clr);
+  padding: 15px 20px;
+  font-size: 18px;
+  font-family: Open Sans;
+}
+.accordion-button:focus {
+  box-shadow: none;
 }
 
-@media screen and (max-width: 1135px) {
+/* Flote Box Section */
+.flote-section {
+  display: flex;
+  justify-content: center;
+}
+.subscribe-section {
+  background-color: var(--secondary-clr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px 0 40px;
+  border-radius: 10px;
+  width: 1200px;
+  height: 385px;
+  margin-bottom: 60px;
+}
+.flote-main {
+  display: flex;
+}
+.subscribe-text {
+  padding-bottom: 60px;
+}
+.subscribe-text > h2 {
+  color: var(--forth-clr);
+  font-size: 45px;
+  font-family: Coustard;
+  font-weight: normal;
+}
+.highlight {
+  color: var(--third-clr);
+}
+.subscribe-text > p {
+  font-size: 16px;
+  color: var(--forth-clr);
+  margin: 20px 0;
+  font-family: Open Sans;
+}
+.email-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid gray;
+}
+.email-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+  width: 250px;
+  background-color: transparent;
+}
+.email-form button {
+  padding: 10px 20px;
+  background-color: #ba3e3e;
+  color: var(--forth-clr);
+  border-right: 2px solid var(--forth-clr);
+  border-bottom: 2px solid var(--forth-clr);
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: background-color 0.6s ease-in-out;
+}
+.email-form button:hover {
+  background-color: olive;
+  color: var(--secondary-clr);
+}
+.subscribe-image {
+  max-width: 530px;
+}
+.subscribe-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.subscribe-plant {
+  max-width: 130px;
+}
+.subscribe-plant > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.small-flote-section {
+  display: none;
+}
+
+/* Footer Section */
+.col-4 {
+  width: 25% !important;
+}
+.footer-logo {
+  max-width: 75px;
+}
+.footer-logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-1st > h4 {
+  font-size: 16px;
+  color: var(--third-clr);
+  margin-bottom: 20px;
+  font-family: Coustard;
+  font-weight: normal;
+}
+.footer-1st > p {
+  color: var(--forth-clr);
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-family: Open Sans;
+}
+.footer-icon {
+  max-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  background-color: #ba3e3e;
+  padding: 5px;
+}
+.footer-icon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+ul h4 {
+  font-size: 16px;
+  color: var(--third-clr);
+  font-family: Coustard;
+  font-weight: normal;
+}
+ul > li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+ul > li > a {
+  color: var(--forth-clr);
+  font-family: Open Sans;
+  position: relative;
+}
+ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--third-clr);
+  transition: width 0.3s ease;
+}
+ul > li > a:hover::after {
+  width: 100%;
+}
+.footer-section > p {
+  font-size: 16px;
+  color: var(--forth-clr);
+  text-align: center;
+  font-family: Open Sans;
+  margin-bottom: 10px;
+}
+.footer-section > hr {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: var(--forth-clr);
+}
+
+@media screen and (max-width: 1200px) {
   /* Header Section */
   .hamburger {
     position: relative;
@@ -219,7 +428,6 @@ h2 > span {
     background: transparent;
     cursor: pointer;
     display: flex;
-    /* margin-left: auto !important; */
   }
   .hamburger input {
     display: none;
@@ -308,11 +516,60 @@ h2 > span {
   nav {
     gap: 50px;
   }
+
+  /* Flote Box Section  */
+  .subscribe-section {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* Flote Box Section  */
+  .subscribe-image {
+    max-width: 430px;
+  }
+  .subscribe-plant {
+    max-width: 100px;
+  }
+  .subscribe-section {
+    max-width: 800px;
+  }
+  .subscribe-text > h2 {
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 768px) {
   /* Frequent Section */
   .frequent-section {
     padding: 40px 0;
+  }
+
+  /* Accordion Section */
+  .accordion-section {
+    padding-bottom: 40px;
+  }
+
+  /* Flote Box Section */
+  .flote-section {
+    display: none;
+  }
+
+  /* Small Flote Section */
+  .small-flote-section {
+    display: block;
+    background-color: var(--secondary-clr);
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+  .small-flote-section .subscribe-text {
+    padding-bottom: 0;
+  }
+
+  /* Footer Section */
+  .col-4 {
+    width: 50% !important;
+  }
+  .footer-section > div > div {
+    row-gap: 20px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -363,6 +620,77 @@ h2 > span {
   }
   .frequent-section .header-btn > a {
     padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  /* Accordion Section */
+  .accordion-section {
+    padding-bottom: 20px;
+  }
+  .accordion-button span {
+    font-size: 18px;
+  }
+  .accordion-body {
+    font-size: 16px;
+  }
+  .accordion-button > p {
+    color: var(--forth-clr);
+    font-family: Coustard;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  .accordion-item {
+    margin-bottom: 15px;
+  }
+  .accordion-button::after {
+    content: "➤" !important;
+    font-size: 16px;
+    color: var(--third-clr);
+  }
+
+  /* Small Flote Section */
+  .small-flote-section {
+    display: block;
+    background-color: var(--secondary-clr);
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .subscribe-text > h2 {
+    font-size: 25px;
+  }
+  .subscribe-text > p {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .email-form button {
+    font-size: 12px;
+  }
+
+  /* Footer Section */
+  .col-4 {
+    width: 100% !important;
+  }
+  .footer-section > div > div {
+    row-gap: 10px;
+  }
+  .footer-section > hr {
+    margin-top: 20px;
+  }
+  ul h4 {
+    font-size: 12px;
+  }
+  ul > li {
+    font-size: 12px;
+  }
+  .footer-section > p {
+    font-size: 12px;
+  }
+  .footer-1st > h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .footer-1st > p {
+    margin-bottom: 20px;
     font-size: 12px;
   }
 }
