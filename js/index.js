@@ -27,7 +27,6 @@ menu.addEventListener("click", () => {
   }
 });
 
-
 // Featured Section
 function countUp(el, target) {
   let current = 0;
@@ -58,3 +57,23 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 countElements.forEach((element) => observer.observe(element));
+
+// Show button when user scrolls down 100px
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when clicked
+scrollToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
