@@ -49,7 +49,8 @@ ul > li {
   font-size: 15px;
   color: var(--secondary-clr);
   background-color: var(--third-clr);
-  padding: 10px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-family: Open Sans;
   position: relative;
 }
@@ -63,7 +64,6 @@ ul > li {
     repeat-x;
   background-size: contain;
 }
-
 /* Header Section */
 .nav-logo {
   max-width: 110px;
@@ -149,27 +149,47 @@ nav,
   display: inline-block;
   background-color: var(--forth-clr);
 }
-.header-btn > a {
+.header-btn {
+  position: relative;
   padding: 11px 15px;
+  font-size: 16px;
   background-color: #ba3e3e;
   color: var(--forth-clr);
   border-radius: 2px;
   border-bottom: 3px solid var(--third-clr);
   border-right: 3px solid var(--third-clr);
   font-family: Open Sans;
-  transition: background-color 0.6s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s;
 }
-.header-btn a:hover {
-  background-color: olive;
+.header-btn::before {
+  content: "";
+  background: var(--third-clr);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+.header-btn:hover::before {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header-btn:hover {
   color: var(--secondary-clr);
 }
-.hamburger {
+.small-icon-header {
   display: none;
 }
 .active {
   display: flex !important;
 }
-.small-header {
+.icon {
   display: none;
 }
 
@@ -180,7 +200,7 @@ nav,
 .frequent-section > div {
   text-align: center;
 }
-.frequent-section > div > h2 {
+.frequent-section  h2 {
   color: var(--forth-clr);
   font-size: 45px;
   font-family: Coustard;
@@ -226,12 +246,13 @@ h2 > span {
   font-size: 20px;
 }
 .accordion-button::after {
-  content: "➤" !important;
+  content: "➤";
   font-size: 18px;
   color: var(--third-clr);
+  background-image: none !important;
 }
 .accordion-button:not(.collapsed)::after {
-  transform: rotate(90deg) !important;
+  transform: rotate(90deg);
 }
 .accordion-button span {
   color: #fcbf49;
@@ -338,7 +359,7 @@ h2 > span {
 
 /* Footer Section */
 .col-4 {
-  width: 25% !important;
+  width: 25%;
 }
 .footer-logo {
   max-width: 75px;
@@ -377,6 +398,9 @@ h2 > span {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.footer-section ul{
+  padding-left: 0;
 }
 ul h4 {
   font-size: 16px;
@@ -420,57 +444,23 @@ ul > li > a:hover::after {
 }
 
 @media screen and (max-width: 1200px) {
-  /* Header Section */
-  .hamburger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-  }
-  .hamburger input {
-    display: none;
-  }
-  .hamburger span {
+    /* Header Section */
+  .icon {
     display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: var(--forth-clr);
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
+    margin-left: auto;
+    color: var(--forth-clr);
+    font-size: 2rem;
+    cursor: pointer;
   }
-  .hamburger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
+  .icon i {
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  .hamburger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
+  .icon i.fa-xmark {
+    transform: rotate(90deg);
+    color: var(--third-clr);
   }
-  .hamburger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
-  }
-  .hamburger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
-  }
-  .hamburger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
+  .icon i.fade-out {
     opacity: 0;
-  }
-  .hamburger input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
   }
   .nav-right {
     display: none;
@@ -480,24 +470,29 @@ ul > li > a:hover::after {
     left: 0;
     right: 0;
     top: 150px;
-    background-color: rgba(229, 174, 86, 0.3);
+    background-color: rgba(216, 189, 145, 0.3);
     backdrop-filter: blur(10px);
     padding: 10px;
     animation: dropdown 1 500ms forwards linear;
   }
   @keyframes dropdown {
     from {
-      transform: translateX(-30px);
+      transform: translateY(-30px);
       opacity: 0;
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
       opacity: 1;
     }
   }
   .nav-right > ul {
     flex-direction: column;
     gap: 10px;
+    padding-left: 0;
+  }
+  .nav-right > ul > li > a {
+    color: var(--secondary-clr);
+    font-weight: bold;
   }
   .down-arrow {
     display: none;
@@ -507,11 +502,11 @@ ul > li > a:hover::after {
   .header-cart {
     display: none;
   }
-  .small-header {
+  .small-icon-header {
     display: flex;
-    margin-left: auto;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
+    justify-content: center;
   }
   nav {
     gap: 50px;
@@ -578,23 +573,9 @@ ul > li > a:hover::after {
     font-size: 12px;
   }
 
-  /* Header Section */
-  .hamburger span {
-    height: 2px;
-    width: 80%;
-  }
-  .hamburger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 5px;
-    left: 5px;
-  }
-  .header-search-small {
-    max-width: 25px;
-    min-height: 25px;
-  }
-  .header-cart-small {
-    max-width: 20px;
-    /* min-height: 20px; */
+   /* Header Section */
+  .icon {
+    font-size: 1.8rem;
   }
   .nav-logo {
     max-width: 80px;
@@ -606,12 +587,16 @@ ul > li > a:hover::after {
   .small-header {
     gap: 20px;
   }
+  .header-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
 
   /* Frequent Section */
   .frequent-section {
     padding: 20px 0;
   }
-  .frequent-section > div > h2 {
+  .frequent-section  h2 {
     font-size: 25px;
   }
   .frequent-section > div > p {

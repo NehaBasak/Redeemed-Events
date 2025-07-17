@@ -1,10 +1,32 @@
 // Navbar
+// const navRight = document.querySelector(".nav-right");
+// const menu = document.querySelector(".icon");
+// menu.addEventListener("click", () => {
+//   navRight.classList.toggle("active");
+// });
+
+// Navbar
 const navRight = document.querySelector(".nav-right");
-const menu = document.querySelector(".hamburger input");
+const menu = document.querySelector(".icon");
+const icon = menu.querySelector("i");
 
 menu.addEventListener("click", () => {
   navRight.classList.toggle("active");
+
+  // Toggle icon classes
+  const isMenuOpen = navRight.classList.contains("active");
+
+  if (isMenuOpen) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+    document.body.classList.add("no-scroll"); // optional: stop scrolling when menu is open
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+    document.body.classList.remove("no-scroll");
+  }
 });
+
 
 // Featured Section
 function countUp(el, target) {
@@ -21,7 +43,7 @@ function countUp(el, target) {
   };
   update();
 }
-const counters = document.querySelectorAll(".count");
+const countElements = document.querySelectorAll(".count");
 const observer = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
@@ -29,10 +51,10 @@ const observer = new IntersectionObserver(
         const el = entry.target;
         const target = parseInt(el.getAttribute("data-target"));
         countUp(el, target);
-        obs.unobserve(el); // run once
+        obs.unobserve(el);
       }
     });
   },
   { threshold: 0.5 }
 );
-counters.forEach((counter) => observer.observe(counter));
+countElements.forEach((element) => observer.observe(element));

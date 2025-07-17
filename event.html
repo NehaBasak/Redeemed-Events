@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Event</title>
     <link rel="stylesheet" href="./css/event.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -35,24 +31,9 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/1 219.png" alt="" /></a>
           </div>
-          <div class="small-header">
-            <a class="header-search-small" href="" target="_blank"
-              ><img src="./assets/Vector (19).png" alt=""
-            /></a>
-            <a class=".header-cart-small" href="" target="_blank"
-              ><img src="./assets/Group 1707484788 (1).png" alt=""
-            /></a>
-            <label class="hamburger" for="hamburger">
-              <input
-                type="checkbox"
-                id="hamburger"
-                aria-label="Toggle navigation"
-              />
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
+          <label for="dash" class="icon"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
           <div class="nav-right">
             <ul>
               <li class="list dropdown">
@@ -63,10 +44,12 @@
                   ><img src="./assets/Vector (20).png" alt=""
                 /></a>
                 <div class="dropdown-content">
-                  <a href="./eventdetails.html" target="_blank">Event-details</a>
+                  <a href="./eventdetails.html" target="_blank"
+                    >Event-details</a
+                  >
                   <a href="./faq.html" target="_blank">Faq</a>
                   <a href="./review.html" target="_blank">Review</a>
-                  <a href="#">Blog</a>
+                  <a href="./blog.html" target="_blank">Blog</a>
                 </div>
               </li>
               <li class="list dropdown">
@@ -86,8 +69,16 @@
                   ><img src="./assets/Vector (20).png" alt=""
                 /></a>
                 <div class="dropdown-content">
-                  <a href="./contactus.html" target="_blank">Contact Us</a>
+                  <a href="./contactus.html">Contact Us</a>
                 </div>
+              </li>
+              <li class="small-icon-header">
+                <a class="small-header-search" href="" target="_blank"
+                  ><img src="./assets/Vector (19).png" alt=""
+                /></a>
+                <a class="small-header-cart" href="" target="_blank"
+                  ><img src="./assets/Group 1707484788 (1).png" alt=""
+                /></a>
               </li>
               <li>
                 <a class="header-search" href="" target="_blank"
@@ -103,7 +94,7 @@
                 /></a>
               </li>
               <li>
-                <div class="header-btn"><a href="">Create your event</a></div>
+                <button class="header-btn">Create your event</button>
               </li>
             </ul>
           </div>
@@ -127,7 +118,7 @@
             </p>
             <form class="email-form">
               <input type="email" placeholder="Search event..." required />
-              <button type="submit">Search now</button>
+              <button class="header-btn">Search now</button>
             </form>
           </div>
           <div class="event-subscribe-image">
@@ -161,7 +152,13 @@
     <!-- Category Section -->
     <section class="category-section">
       <div class="container">
-        <h2>Category of <span>events</span></h2>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <h2>Category of <span>events</span></h2>
+        </div>
         <div><img src="./assets/Group 1707484834.png" alt="" /></div>
         <div class="row">
           <div class="col-3">
@@ -231,34 +228,41 @@
             </div>
           </div>
           <div class="col-2">
-            <div class="feature-text">
-              <h2>Featured <span>event.</span></h2>
-              <div><img src="./assets/Group 1707484834.png" alt="" /></div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. 
-              </p>
-              <div class="feature-box">
-                <div>
-                  <div class="count yellow" data-target="2">0</div>
-                  <p>Days</p>
+            <div
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <div class="feature-text">
+                <h2>Featured <span>event.</span></h2>
+                <div><img src="./assets/Group 1707484834.png" alt="" /></div>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. 
+                </p>
+                <div class="feature-box">
+                  <div>
+                    <div class="count yellow" data-target="2">0</div>
+                    <p>Days</p>
+                  </div>
+                  <div>
+                    <div class="count gray" data-target="23">0</div>
+                    <p>Hours</p>
+                  </div>
+                  <div>
+                    <div class="count red" data-target="35">0</div>
+                    <p>Minutes</p>
+                  </div>
+                  <div>
+                    <div class="count gray" data-target="52">0</div>
+                    <p>Seconds</p>
+                  </div>
                 </div>
-                <div>
-                  <div class="count gray" data-target="23">0</div>
-                  <p>Hours</p>
-                </div>
-                <div>
-                  <div class="count red" data-target="35">0</div>
-                  <p>Minutes</p>
-                </div>
-                <div>
-                  <div class="count gray" data-target="52">0</div>
-                  <p>Seconds</p>
-                </div>
+                <button class="header-btn">Explore events</button>
               </div>
-              <div class="header-btn"><a href="">Explore events</a></div>
             </div>
           </div>
         </div>
@@ -333,59 +337,59 @@
     <!-- Featured Slider Section -->
     <section class="featured-slider-section">
       <div class="container">
-        <h2>Featured <span>artists</span></h2>
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <h2>Featured <span>artists</span></h2>
+        </div>
         <div><img src="./assets/Group 1707484834.png" alt="" /></div>
-        <div class="swiper-container">
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40291.png" alt="Jacob" />
-              <h3>Jacob Martine</h3>
+              <img src="./assets/Rectangle 40291.png" alt="Jacob Martine" />
+              <h4>Jacob Martine</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40294.png" alt="David" />
-              <h3>David Wing</h3>
+              <img src="./assets/Rectangle 40294.png" alt="David Wing" />
+              <h4>David Wing</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40295.png" alt="Pavlo" />
-              <h3>Pavlo Glenn</h3>
+              <img src="./assets/Rectangle 40295.png" alt="Pavlo Glenn" />
+              <h4>Pavlo Glenn</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40296.png" alt="Alice" />
-              <h3>Alice Mele</h3>
+              <img src="./assets/Rectangle 40296.png" alt="Alice Mele" />
+              <h4>Alice Mele</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40291.png" alt="Jacob" />
-              <h3>Jacob Martine</h3>
+              <img src="./assets/Rectangle 40291.png" alt="Jacob Martine" />
+              <h4>Jacob Martine</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40294.png" alt="David" />
-              <h3>David Wing</h3>
+              <img src="./assets/Rectangle 40294.png" alt="David Wing" />
+              <h4>David Wing</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40295.png" alt="Pavlo" />
-              <h3>Pavlo Glenn</h3>
+              <img src="./assets/Rectangle 40295.png" alt="Pavlo Glenn" />
+              <h4>Pavlo Glenn</h4>
               <p>Lorem ipsum text</p>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/Rectangle 40296.png" alt="Alice" />
-              <h3>Alice Mele</h3>
+              <img src="./assets/Rectangle 40296.png" alt="Alice Mele" />
+              <h4>Alice Mele</h4>
               <p>Lorem ipsum text</p>
             </div>
           </div>
-          <!-- <div class="custom-navigation">
-            <button class="custom-prev">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="custom-next">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div> -->
+
+          <!-- Navigation Arrows -->
+          <div class="custom-navigation">
+            <button class="custom-prev">⟵</button>
+            <button class="custom-next">⟶</button>
+          </div>
         </div>
       </div>
     </section>
@@ -393,9 +397,414 @@
     <!-- Our Event Slider -->
     <section class="our-slider-section">
       <div class="container">
-        <h2>Our <span>events</span></h2>
+        <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <h2>Our <span>events</span></h2>
+        </div>
         <p>Lorem Ipsum is simply dummy text</p>
         <div><img src="./assets/Group 1707484834.png" alt="" /></div>
+        <div class="row">
+          <div class="col">
+            <div class="swiper eventSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="main-box">
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40273 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40274 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40275 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40276.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40277.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40278.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40279.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40280.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40281.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-box">
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40273 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40274 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40275 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40276.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40277.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40278.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40279.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40280.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40281.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-box">
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40273 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40274 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40275 (1).png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40276.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40277.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40278.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40279.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40280.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                    <div class="trending-box">
+                      <div class="trending-img">
+                        <img src="./assets/Rectangle 40281.png" alt="" />
+                      </div>
+                      <p class="p1">May 05, 2023</p>
+                      <p class="p2">Lorem ipsum dolor sit amet lorem</p>
+                      <p class="p3">
+                        Duis dui nibh, gravida sit amet dolor eget, eleifend
+                        iaculis sem. Proin non
+                      </p>
+                      <a class="trending-btn" href=""
+                        >Learn more <img src="./assets/Vector (24).png" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -412,7 +821,7 @@
             <p>Sign up for the latest news straight to your inbox.</p>
             <form class="email-form">
               <input type="email" placeholder="Enter your email" required />
-              <button type="submit">Join</button>
+              <button class="header-btn">Join</button>
             </form>
           </div>
           <div class="flote-main">
@@ -439,7 +848,7 @@
           <p>Sign up for the latest news straight to your inbox.</p>
           <form class="email-form">
             <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Join</button>
+            <button class="header-btn">Join</button>
           </form>
         </div>
       </div>
@@ -525,37 +934,96 @@
     </footer>
 
     <script src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Swiper Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".swiper-container", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        speed: 3000, // smooth scroll speed (higher = slower)
-        autoplay: {
-          delay: 0, // continuous scroll
-          disableOnInteraction: false,
-        },
-        allowTouchMove: false, // optional: disable manual dragging to ensure smooth scroll
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
         navigation: {
           nextEl: ".custom-next",
           prevEl: ".custom-prev",
         },
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        loop: false,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+        },
       });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      var eventSwiper = new Swiper(".mySwiper", {
+      var gridSwiper = new Swiper(".eventSwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
         },
       });
+    </script>
+
+    <script>
+      function animateCounter(element, targetValue) {
+        let currentValue = 0;
+        const increment = targetValue / 100;
+
+        const updateCounter = () => {
+          currentValue += increment;
+          if (currentValue < targetValue) {
+            element.textContent = Math.floor(currentValue);
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = targetValue;
+          }
+        };
+
+        updateCounter();
+      }
+
+      const counterElements = document.querySelectorAll(".count");
+
+      const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              const targetValue = parseInt(element.getAttribute("data-target"));
+              animateCounter(element, targetValue);
+              observer.unobserve(element); // Stop observing after animation
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counterElements.forEach((el) => counterObserver.observe(el));
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

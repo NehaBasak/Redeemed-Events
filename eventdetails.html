@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Event-Details</title>
     <link rel="stylesheet" href="./css/eventdetails.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
@@ -23,24 +30,9 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/1 219.png" alt="" /></a>
           </div>
-          <div class="small-header">
-            <a class="header-search-small" href="" target="_blank"
-              ><img src="./assets/Vector (19).png" alt=""
-            /></a>
-            <a class=".header-cart-small" href="" target="_blank"
-              ><img src="./assets/Group 1707484788 (1).png" alt=""
-            /></a>
-            <label class="hamburger" for="hamburger">
-              <input
-                type="checkbox"
-                id="hamburger"
-                aria-label="Toggle navigation"
-              />
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
+          <label for="dash" class="icon"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
           <div class="nav-right">
             <ul>
               <li class="list dropdown">
@@ -51,10 +43,12 @@
                   ><img src="./assets/Vector (20).png" alt=""
                 /></a>
                 <div class="dropdown-content">
-                  <a href="./eventdetails.html" target="_blank">Event-details</a>
+                  <a href="./eventdetails.html" target="_blank"
+                    >Event-details</a
+                  >
                   <a href="./faq.html" target="_blank">Faq</a>
                   <a href="./review.html" target="_blank">Review</a>
-                  <a href="#">Blog</a>
+                  <a href="./blog.html" target="_blank">Blog</a>
                 </div>
               </li>
               <li class="list dropdown">
@@ -74,8 +68,16 @@
                   ><img src="./assets/Vector (20).png" alt=""
                 /></a>
                 <div class="dropdown-content">
-                  <a href="./contactus.html" target="_blank">Contact Us</a>
+                  <a href="./contactus.html">Contact Us</a>
                 </div>
+              </li>
+              <li class="small-icon-header">
+                <a class="small-header-search" href="" target="_blank"
+                  ><img src="./assets/Vector (19).png" alt=""
+                /></a>
+                <a class="small-header-cart" href="" target="_blank"
+                  ><img src="./assets/Group 1707484788 (1).png" alt=""
+                /></a>
               </li>
               <li>
                 <a class="header-search" href="" target="_blank"
@@ -91,7 +93,7 @@
                 /></a>
               </li>
               <li>
-                <div class="header-btn"><a href="">Create your event</a></div>
+                <button class="header-btn">Create your event</button>
               </li>
             </ul>
           </div>
@@ -137,7 +139,13 @@
                 <p>11:20 Pm</p>
               </div>
             </div>
-            <h2>Event <span>name here</span></h2>
+            <div
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <h2>Event <span>name here</span></h2>
+            </div>
             <div><img src="./assets/Group 1707484834.png" alt="" /></div>
             <div class="artist">
               <div class="artist-img">
@@ -170,7 +178,7 @@
               uncover many web sites still in their infancy. Various versions
               have evolved over the years, sometimes by accident,
             </p>
-            <div class="header-btn"><a href="">Add to cart</a></div>
+            <button class="header-btn">Add to cart</button>
             <div class="event-last">
               <p>Add to cart:</p>
               <div class="event-last-img">
@@ -212,7 +220,13 @@
     <!-- Trending Section -->
     <section class="trending-section">
       <div class="container">
-        <h2>Related <span>events</span></h2>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <h2>Related <span>events</span></h2>
+        </div>
         <div><img src="./assets/Group 1707484834.png" alt="" /></div>
         <p>Take a peek at some amazing events using Ticket Redeemed</p>
         <div class="row">
@@ -287,7 +301,7 @@
             <p>Sign up for the latest news straight to your inbox.</p>
             <form class="email-form">
               <input type="email" placeholder="Enter your email" required />
-              <button type="submit">Join</button>
+              <button class="header-btn">Join</button>
             </form>
           </div>
           <div class="flote-main">
@@ -314,7 +328,7 @@
           <p>Sign up for the latest news straight to your inbox.</p>
           <form class="email-form">
             <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Join</button>
+            <button class="header-btn">Join</button>
           </form>
         </div>
       </div>
