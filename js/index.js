@@ -1,31 +1,22 @@
-// Navbar
-// const navRight = document.querySelector(".nav-right");
-// const menu = document.querySelector(".icon");
-// menu.addEventListener("click", () => {
-//   navRight.classList.toggle("active");
-// });
+// Nav-Bar
 
-// Navbar
-const navRight = document.querySelector(".nav-right");
-const menu = document.querySelector(".icon");
-const icon = menu.querySelector("i");
+function toggleNav() {
+  document.getElementById("navRight").classList.add("active");
+}
 
-menu.addEventListener("click", () => {
-  navRight.classList.toggle("active");
+function closeNav() {
+  document.getElementById("navRight").classList.remove("active");
+}
 
-  // Toggle icon classes
-  const isMenuOpen = navRight.classList.contains("active");
+function openLogin(e) {
+  e.preventDefault();
+  document.getElementById("overlay").classList.add("active");
+}
 
-  if (isMenuOpen) {
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-xmark");
-    document.body.classList.add("no-scroll"); // optional: stop scrolling when menu is open
-  } else {
-    icon.classList.remove("fa-xmark");
-    icon.classList.add("fa-bars");
-    document.body.classList.remove("no-scroll");
-  }
-});
+function closeLogin() {
+  document.getElementById("overlay").classList.remove("active");
+}
+
 
 // Featured Section
 function countUp(el, target) {
@@ -77,3 +68,16 @@ scrollToTopBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+
+
+// Range
+const slider = document.querySelector(".slider");
+
+function updateSliderColor() {
+  const val = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+  slider.style.background = `linear-gradient(to right, var(--third-clr) ${val}%, #383838 ${val}%)`;
+}
+
+slider.addEventListener("input", updateSliderColor);
+updateSliderColor();

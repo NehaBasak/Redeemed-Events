@@ -31,70 +31,101 @@
           <div class="nav-logo">
             <a href=""><img src="./assets/1 219.png" alt="" /></a>
           </div>
-          <label for="dash" class="icon"
-            ><i class="fa-solid fa-bars"></i
-          ></label>
-          <div class="nav-right">
+          <div class="nav-btn small">
+            <input type="checkbox" id="dash" style="display: none" />
+            <label class="icon" onclick="toggleNav(this)" id="menuIcon">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+          <div class="nav-right" id="navRight">
+            <div class="mobile-close" onclick="closeNav()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
-              <li class="list dropdown">
-                <a href="./event.html" target="_blank" class="dropbtn"
-                  >Events</a
-                >
-                <a href="" class="down-arrow"
-                  ><img src="./assets/Vector (20).png" alt=""
-                /></a>
+              <li class="list dropdown dropbtn">
+                Events
+                <img
+                  src="./assets/Vector (20).png"
+                  onclick="closeNav()"
+                  alt=""
+                />
                 <div class="dropdown-content">
-                  <a href="./eventdetails.html" target="_blank"
+                  <a
+                    href="./eventdetails.html"
+                    onclick="closeNav()"
+                    target="_blank"
                     >Event-details</a
                   >
-                  <a href="./faq.html" target="_blank">Faq</a>
-                  <a href="./review.html" target="_blank">Review</a>
-                  <a href="./blog.html" target="_blank">Blog</a>
                 </div>
               </li>
-              <li class="list dropdown">
-                <a href="" target="_blank" class="dropbtn">Resources</a>
-                <a href="" class="down-arrow"
-                  ><img src="./assets/Vector (20).png" alt=""
-                /></a>
+              <li class="list dropdown dropbtn" onclick="closeNav()">
+                Resources
+                <img
+                  src="./assets/Vector (20).png"
+                  onclick="closeNav()"
+                  alt=""
+                />
                 <div class="dropdown-content">
-                  <a href="./resourceabout.html" target="_blank">About us</a>
-                  <a href="./resourceprice.html" target="_blank">Fees</a>
-                  <a href="./resourcevideo.html" target="_blank">Help videos</a>
+                  <a
+                    href="./resourceabout.html"
+                    onclick="closeNav()"
+                    target="_blank"
+                    >About us</a
+                  >
+                  <a
+                    href="./resourceprice.html"
+                    onclick="closeNav()"
+                    target="_blank"
+                    >Fees</a
+                  >
+                  <a
+                    href="./resourcevideo.html"
+                    onclick="closeNav()"
+                    target="_blank"
+                    >Help videos</a
+                  >
                 </div>
               </li>
-              <li class="list dropdown">
-                <a href="" target="_blank" class="dropbtn">Log in</a>
-                <a href="" class="down-arrow"
-                  ><img src="./assets/Vector (20).png" alt=""
-                /></a>
-                <div class="dropdown-content">
-                  <a href="./contactus.html">Contact Us</a>
-                </div>
+              <li class="list dropdown dropbtn" onclick="closeNav()">
+                Log in
+                <img
+                  src="./assets/Vector (20).png"
+                  onclick="closeNav()"
+                  alt=""
+                />
               </li>
-              <li class="small-icon-header">
-                <a class="small-header-search" href="" target="_blank"
+
+              <li class="small-scr">
+                <a
+                  class="header-search"
+                  onclick="closeNav()"
+                  href=""
+                  target="_blank"
                   ><img src="./assets/Vector (19).png" alt=""
                 /></a>
-                <a class="small-header-cart" href="" target="_blank"
+              </li>
+              <li class="small-scr">
+                <span class="divider" onclick="closeNav()"></span>
+              </li>
+              <li class="small-scr">
+                <a
+                  class="header-cart"
+                  onclick="closeNav()"
+                  href=""
+                  target="_blank"
                   ><img src="./assets/Group 1707484788 (1).png" alt=""
                 /></a>
               </li>
-              <li>
-                <a class="header-search" href="" target="_blank"
-                  ><img src="./assets/Vector (19).png" alt=""
-                /></a>
+              <li class="big-scr">
+                <img src="./assets/Vector (19).png" alt="" /><img
+                  src="./assets/Group 1707484788 (1).png"
+                  alt=""
+                />
               </li>
               <li>
-                <span class="divider"></span>
-              </li>
-              <li>
-                <a class="header-cart" href="" target="_blank"
-                  ><img src="./assets/Group 1707484788 (1).png" alt=""
-                /></a>
-              </li>
-              <li>
-                <button class="header-btn">Create your event</button>
+                <button class="header-btn" onclick="closeNav()">
+                  Create your event
+                </button>
               </li>
             </ul>
           </div>
@@ -118,7 +149,7 @@
             </p>
             <form class="email-form">
               <input type="email" placeholder="Search event..." required />
-              <button class="header-btn">Search now</button>
+              <a href="#" class="header-btn">Search now</a>
             </form>
           </div>
           <div class="event-subscribe-image">
@@ -219,7 +250,7 @@
     <!-- Featured Section -->
     <section class="feature-section">
       <div class="container">
-        <div class="row">
+        <div class="row feature-hub">
           <div class="col-2">
             <div data-aos="flip-left">
               <div class="feature-img">
@@ -228,41 +259,34 @@
             </div>
           </div>
           <div class="col-2">
-            <div
-              data-aos="fade-down"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
-            >
-              <div class="feature-text">
-                <h2>Featured <span>event.</span></h2>
-                <div><img src="./assets/Group 1707484834.png" alt="" /></div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. 
-                </p>
-                <div class="feature-box">
-                  <div>
-                    <div class="count yellow" data-target="2">0</div>
-                    <p>Days</p>
-                  </div>
-                  <div>
-                    <div class="count gray" data-target="23">0</div>
-                    <p>Hours</p>
-                  </div>
-                  <div>
-                    <div class="count red" data-target="35">0</div>
-                    <p>Minutes</p>
-                  </div>
-                  <div>
-                    <div class="count gray" data-target="52">0</div>
-                    <p>Seconds</p>
-                  </div>
+            <div class="feature-text">
+              <h2>Featured <span>event.</span></h2>
+              <div><img src="./assets/Group 1707484834.png" alt="" /></div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. 
+              </p>
+              <div class="feature-box">
+                <div>
+                  <div class="count yellow" data-target="2">0</div>
+                  <p>Days</p>
                 </div>
-                <button class="header-btn">Explore events</button>
+                <div>
+                  <div class="count gray" data-target="23">0</div>
+                  <p>Hours</p>
+                </div>
+                <div>
+                  <div class="count red" data-target="35">0</div>
+                  <p>Minutes</p>
+                </div>
+                <div>
+                  <div class="count gray" data-target="52">0</div>
+                  <p>Seconds</p>
+                </div>
               </div>
+              <a href="#" class="header-btn">Explore events</a>
             </div>
           </div>
         </div>
@@ -821,7 +845,7 @@
             <p>Sign up for the latest news straight to your inbox.</p>
             <form class="email-form">
               <input type="email" placeholder="Enter your email" required />
-              <button class="header-btn">Join</button>
+              <a href="#" class="header-btn">Join</a>
             </form>
           </div>
           <div class="flote-main">
@@ -891,12 +915,13 @@
                   <h4>Navigate</h4>
                 </a>
               </li>
-              <li><a href="">Event</a></li>
+              <li><a href="./event.html" target="_blank">Event</a></li>
               <li><a href="">Resources</a></li>
               <li><a href="">Cart</a></li>
-              <li><a href="">Faq</a></li>
-              <li><a href="">Review</a></li>
-              <li><a href="">Contact us</a></li>
+              <li><a href="./faq.html" target="_blank">Faq</a></li>
+              <li><a href="./review.html" target="_blank">Review</a></li>
+              <li><a href="./contactus.html" target="_blank">Contact us</a></li>
+              <li><a href="./blog.html" target="_blank">Blog</a></li>
             </ul>
           </div>
           <div class="col-4">

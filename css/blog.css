@@ -91,7 +91,7 @@ nav,
   margin: 0 auto;
   gap: 30px;
 }
-.nav-right > ul > li > a {
+.nav-right > ul > li {
   font-size: 16px;
   color: var(--forth-clr);
   font-family: Open Sans;
@@ -191,6 +191,12 @@ nav,
   display: flex !important;
 }
 .icon {
+  display: none;
+}
+.small {
+  display: none;
+}
+.big-scr {
   display: none;
 }
 
@@ -346,7 +352,7 @@ nav,
   width: 250px;
   background-color: transparent;
 }
-.email-form button {
+.email-form .header-btn {
   padding: 10px 20px;
   background-color: #ba3e3e;
   color: var(--forth-clr);
@@ -355,10 +361,6 @@ nav,
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   transition: background-color 0.6s ease-in-out;
-}
-.email-form button:hover {
-  background-color: olive;
-  color: var(--secondary-clr);
 }
 .subscribe-image {
   max-width: 530px;
@@ -411,11 +413,12 @@ nav,
   font-family: Open Sans;
 }
 .footer-icon {
-  max-width: 20px;
-  min-height: 20px;
   border-radius: 50%;
   background-color: #ba3e3e;
-  padding: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-icon > img {
   width: 100%;
@@ -489,34 +492,44 @@ ul > li > a:hover::after {
 }
 @media screen and (max-width: 1135px) {
   /* Header Section */
+  .big-scr {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .small-scr {
+    display: none;
+  }
+  nav {
+    flex-basis: 100%;
+    gap: 150px;
+  }
+  .small {
+    display: flex;
+    margin-left: auto;
+  }
+  nav > ul {
+    flex-direction: column;
+  }
   .icon {
+    color: var(--forth-clr);
     display: block;
     margin-left: auto;
-    color: var(--forth-clr);
     font-size: 2rem;
-    cursor: pointer;
-  }
-  .icon i {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .icon i.fa-xmark {
-    transform: rotate(90deg);
-    color: var(--third-clr);
-  }
-  .icon i.fade-out {
-    opacity: 0;
   }
   .nav-right {
     display: none;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    right: -100%;
+    width: 50vw;
+    height: 100vh;
     flex-direction: column;
-    position: absolute;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    top: 150px;
-    background-color: rgba(216, 189, 145, 0.3);
+    align-items: start;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 10px;
     animation: dropdown 1 500ms forwards linear;
   }
   @keyframes dropdown {
@@ -529,31 +542,46 @@ ul > li > a:hover::after {
       opacity: 1;
     }
   }
-  .nav-right > ul {
+  .nav-right.active {
+    right: 0;
+  }
+  .nav-right ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 80px;
   }
-  .nav-right > ul > li > a {
-    color: var(--secondary-clr);
-    font-weight: bold;
+  .nav-right ul li {
+    animation: slideInFromRight 0.3s ease forwards;
+    opacity: 0;
   }
-  .down-arrow {
-    display: none;
+  .nav-right ul li:nth-child(1) {
+    animation-delay: 1s;
   }
-  .divider,
-  .header-search,
-  .header-cart {
-    display: none;
+  .nav-right ul li:nth-child(2) {
+    animation-delay: 0.5s;
   }
-  .small-icon-header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  .nav-right ul li:nth-child(3) {
+    animation-delay: 0.1s;
   }
-  nav {
-    gap: 50px;
+  .nav-right ul .big-scr {
+    animation-delay: 0.15s;
   }
+  .nav-right ul li .header-btn {
+    animation-delay: 0.2s;
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* .mobile-close {
+    display: block;
+  } */
 }
 @media screen and (max-width: 992px) {
   /* Flote Box Section  */
@@ -614,15 +642,20 @@ ul > li > a:hover::after {
     max-width: 80px;
     min-height: 50px;
   }
-  .nav-right {
-    top: 120px;
-  }
-  .small-header {
-    gap: 20px;
-  }
   .header-btn {
-    padding: 10px 12px;
+    padding: 10px;
     font-size: 12px;
+  }
+  .nav-right > ul > li {
+    font-size: 14px;
+  }
+  .nav-right ul {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .big-scr > img {
+    max-width: 30px;
+    object-fit: contain;
   }
 
   /* Latest Section */
@@ -668,8 +701,11 @@ ul > li > a:hover::after {
   }
 
   /* Footer Section */
-  .col-4 {
-    width: 100%;
+  .footer-icon {
+    padding: 6px;
+  }
+  .footer-icons {
+    gap: 10px;
   }
   .footer-section > div > div {
     row-gap: 10px;
