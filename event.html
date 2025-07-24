@@ -29,98 +29,47 @@
       <div class="container">
         <nav>
           <div class="nav-logo">
-            <a href=""><img src="./assets/1 219.png" alt="" /></a>
+            <a href="./index.html"><img src="./assets/1 219.png" alt="" /></a>
           </div>
-          <div class="nav-btn small">
-            <input type="checkbox" id="dash" style="display: none" />
-            <label class="icon" onclick="toggleNav(this)" id="menuIcon">
-              <i class="fa-solid fa-bars"></i>
-            </label>
+          <div class="big-scr">
+            <a class="header-search" href=""
+              ><img src="./assets/Vector (19).png" alt=""
+            /></a>
+            <a class="header-cart" href=""
+              ><img src="./assets/Group 1707484788 (1).png" alt=""
+            /></a>
+            <div class="hamburger" onclick="toggleNav()">
+              <i class="fas fa-bars"></i>
+            </div>
           </div>
           <div class="nav-right" id="navRight">
-            <div class="mobile-close" onclick="closeNav()">
-              <i class="fa-solid fa-xmark"></i>
+            <div class="close-icon" onclick="closeNav()">
+              <i class="fas fa-xmark"></i>
             </div>
             <ul>
-              <li class="list dropdown dropbtn">
-                Events
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-                <div class="dropdown-content">
-                  <a
-                    href="./eventdetails.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Event-details</a
-                  >
-                </div>
+              <li>
+                <a href="./event.html">Events</a>
               </li>
-              <li class="list dropdown dropbtn" onclick="closeNav()">
+              <li class="dropdown">
                 Resources
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-                <div class="dropdown-content">
-                  <a
-                    href="./resourceabout.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >About us</a
-                  >
-                  <a
-                    href="./resourceprice.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Fees</a
-                  >
-                  <a
-                    href="./resourcevideo.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Help videos</a
-                  >
-                </div>
+                <img src="./assets/Vector (20).png" alt="" />
+                <ul class="dropdown-content">
+                  <li><a href="./resourceabout.html">About us</a></li>
+                  <li><a href="./resourceprice.html">Fees</a></li>
+                  <li><a href="./resourcevideo.html">Help videos</a></li>
+                </ul>
               </li>
-              <li class="list dropdown dropbtn" onclick="closeNav()">
-                Log in
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-              </li>
-
+              <li><a href="">Log in</a></li>
               <li class="small-scr">
-                <a
-                  class="header-search"
-                  onclick="closeNav()"
-                  href=""
-                  target="_blank"
+                <a class="header-search" href=""
                   ><img src="./assets/Vector (19).png" alt=""
                 /></a>
               </li>
+              <li class="small-scr"><span class="divider"></span></li>
               <li class="small-scr">
-                <span class="divider" onclick="closeNav()"></span>
-              </li>
-              <li class="small-scr">
-                <a
-                  class="header-cart"
-                  onclick="closeNav()"
-                  href=""
-                  target="_blank"
+                <a class="header-cart" href=""
                   ><img src="./assets/Group 1707484788 (1).png" alt=""
                 /></a>
-              </li>
-              <li class="big-scr">
-                <img src="./assets/Vector (19).png" alt="" /><img
-                  src="./assets/Group 1707484788 (1).png"
-                  alt=""
-                />
               </li>
               <li>
                 <button class="header-btn" onclick="closeNav()">
@@ -149,7 +98,7 @@
             </p>
             <form class="email-form">
               <input type="email" placeholder="Search event..." required />
-              <a href="#" class="header-btn">Search now</a>
+              <button class="header-btn">Search now</button>
             </form>
           </div>
           <div class="event-subscribe-image">
@@ -174,7 +123,7 @@
           </p>
           <form class="email-form">
             <input type="email" placeholder="Search event..." required />
-            <button type="submit">Search now</button>
+            <button class="header-btn">Search now</button>
           </form>
         </div>
       </div>
@@ -312,7 +261,7 @@
                   Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis
                   sem. Proin non
                 </p>
-                <a class="trending-btn" href=""
+                <a class="trending-btn" href="./eventdetails.html"
                   >Learn more <img src="./assets/Vector (24).png" alt=""
                 /></a>
               </div>
@@ -330,7 +279,7 @@
                   Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis
                   sem. Proin non
                 </p>
-                <a class="trending-btn" href=""
+                <a class="trending-btn" href="./eventdetails.html"
                   >Learn more <img src="./assets/Vector (24).png" alt=""
                 /></a>
               </div>
@@ -348,7 +297,7 @@
                   Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis
                   sem. Proin non
                 </p>
-                <a class="trending-btn" href=""
+                <a class="trending-btn" href="./eventdetails.html"
                   >Learn more <img src="./assets/Vector (24).png" alt=""
                 /></a>
               </div>
@@ -446,7 +395,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -460,7 +409,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -474,7 +423,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -488,7 +437,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -502,7 +451,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -516,7 +465,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -530,7 +479,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -544,7 +493,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -558,7 +507,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -576,7 +525,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -590,7 +539,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -604,7 +553,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -618,7 +567,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -632,7 +581,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -646,7 +595,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -660,7 +609,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -674,7 +623,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -688,7 +637,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -706,7 +655,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -720,7 +669,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -734,7 +683,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -748,7 +697,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -762,7 +711,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -776,7 +725,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -790,7 +739,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -804,7 +753,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -818,7 +767,7 @@
                         Duis dui nibh, gravida sit amet dolor eget, eleifend
                         iaculis sem. Proin non
                       </p>
-                      <a class="trending-btn" href=""
+                      <a class="trending-btn" href="./eventdetails.html"
                         >Learn more <img src="./assets/Vector (24).png" alt=""
                       /></a>
                     </div>
@@ -845,7 +794,7 @@
             <p>Sign up for the latest news straight to your inbox.</p>
             <form class="email-form">
               <input type="email" placeholder="Enter your email" required />
-              <a href="#" class="header-btn">Join</a>
+              <button class="header-btn">Join</button>
             </form>
           </div>
           <div class="flote-main">

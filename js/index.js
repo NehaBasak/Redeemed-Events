@@ -1,21 +1,12 @@
 // Nav-Bar
 
-function toggleNav() {
-  document.getElementById("navRight").classList.add("active");
-}
+  function toggleNav() {
+    document.getElementById("navRight").classList.add("active");
+  }
 
-function closeNav() {
-  document.getElementById("navRight").classList.remove("active");
-}
-
-function openLogin(e) {
-  e.preventDefault();
-  document.getElementById("overlay").classList.add("active");
-}
-
-function closeLogin() {
-  document.getElementById("overlay").classList.remove("active");
-}
+  function closeNav() {
+    document.getElementById("navRight").classList.remove("active");
+  }
 
 
 // Featured Section
