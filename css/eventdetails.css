@@ -129,7 +129,7 @@ nav,
 }
 .dropdown-content a {
   color: var(--forth-clr);
-  padding: 10px 15px;
+  padding: 8px;
 }
 .dropdown-content li :hover {
   background-color: var(--third-clr);
@@ -139,7 +139,7 @@ nav,
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  /* gap: 5px; */
   text-align: center;
 }
 .divider {
@@ -183,8 +183,9 @@ nav,
   color: var(--secondary-clr);
 }
 .hamburger {
-  font-size: 24px;
+  font-size: 1.8rem;
   cursor: pointer;
+  margin-top: 2px;
 }
 .close-icon {
   display: none;
@@ -803,6 +804,9 @@ ul > li > a:hover::after {
   }
 
   /* Header Section */
+  .hamburger {
+    font-size: 1.6rem;
+  }
   .big-scr {
     gap: 10px;
   }
@@ -828,6 +832,9 @@ ul > li > a:hover::after {
   }
   .nav-right > ul > li {
     margin-bottom: 20px;
+  }
+  .dropdown ul > li {
+    margin-bottom: 0;
   }
 
   /* Event Name Section */

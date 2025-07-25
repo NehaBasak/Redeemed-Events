@@ -30,93 +30,45 @@
           <div class="nav-logo">
             <a href="./index.html"><img src="./assets/1 219.png" alt="" /></a>
           </div>
-          <div class="nav-btn small">
-            <input type="checkbox" id="dash" style="display: none" />
-            <label class="icon" onclick="toggleNav(this)" id="menuIcon">
+          <div class="big-scr">
+            <a class="header-search" href=""
+              ><img src="./assets/Vector (19).png" alt=""
+            /></a>
+            <a class="header-cart" href=""
+              ><img src="./assets/Group 1707484788 (1).png" alt=""
+            /></a>
+            <div class="hamburger" onclick="toggleNav()">
               <i class="fa-solid fa-bars"></i>
-            </label>
+            </div>
           </div>
           <div class="nav-right" id="navRight">
-            <div class="mobile-close" onclick="closeNav()">
-              <i class="fa-solid fa-xmark"></i>
+            <div class="close-icon" onclick="closeNav()">
+              <i class="fas fa-xmark"></i>
             </div>
             <ul>
-              <li class="list dropdown dropbtn">
-                Events
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-                <div class="dropdown-content">
-                  <a
-                    href="./eventdetails.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Event-details</a
-                  >
-                </div>
+              <li>
+                <a href="./event.html">Events</a>
               </li>
-              <li class="list dropdown dropbtn" onclick="closeNav()">
+              <li class="dropdown">
                 Resources
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-                <div class="dropdown-content">
-                  <a
-                    href="./resourceabout.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >About us</a
-                  >
-                  <a
-                    href="./resourceprice.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Fees</a
-                  >
-                  <a
-                    href="./resourcevideo.html"
-                    onclick="closeNav()"
-                    target="_blank"
-                    >Help videos</a
-                  >
-                </div>
+                <img src="./assets/Vector (20).png" alt="" />
+                <ul class="dropdown-content">
+                  <li><a href="./resourceabout.html">About us</a></li>
+                  <li><a href="./resourceprice.html">Fees</a></li>
+                  <li><a href="./resourcevideo.html">Help videos</a></li>
+                </ul>
               </li>
-              <li class="list dropdown dropbtn" onclick="closeNav()">
-                Log in
-                <img
-                  src="./assets/Vector (20).png"
-                  onclick="closeNav()"
-                  alt=""
-                />
-              </li>
-
+              <li><a href="">Log in</a></li>
               <li class="small-scr">
-                <a
-                  class="header-search"
-                  onclick="closeNav()"
-                  href=""
-                  target="_blank"
+                <a class="header-search" href=""
                   ><img src="./assets/Vector (19).png" alt=""
                 /></a>
               </li>
+              <li class="small-scr"><span class="divider"></span></li>
               <li class="small-scr">
-                <span class="divider" onclick="closeNav()"></span>
-              </li>
-              <li class="small-scr">
-                <a
-                  class="header-cart"
-                  onclick="closeNav()"
-                  href=""
-                  target="_blank"
+                <a class="header-cart" href=""
                   ><img src="./assets/Group 1707484788 (1).png" alt=""
                 /></a>
-              </li>
-              <li class="big-scr">
-                <img src="./assets/Vector (19).png" alt="" /><img src="./assets/Group 1707484788 (1).png" alt="" />
               </li>
               <li>
                 <button class="header-btn" onclick="closeNav()">
@@ -141,7 +93,16 @@
             <h2>Unbeatable prices, <span>no contracts, simple.</span></h2>
           </div>
         </div>
-        <button>£ GBP <img src="./assets/Vector (20).png" alt="" /></button>
+        <div class="currency-dropdown">
+          <a href="#" class="currency-button"
+            >£ GBP <img src="./assets/Vector (20).png" alt=""
+          /></a>
+          <div class="dropdown-option">
+            <a href="#">$ USD</a>
+            <a href="#">€ EUR</a>
+            <a href="#">₹ INR</a>
+          </div>
+        </div>
         <div class="row">
           <div class="col-3">
             <div data-aos="fade-up">
