@@ -128,7 +128,7 @@ nav,
 }
 .dropdown-content a {
   color: var(--forth-clr);
-  padding: 10px 15px;
+  padding: 8px;
 }
 .dropdown-content li :hover {
   background-color: var(--third-clr);
@@ -138,7 +138,7 @@ nav,
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  /* gap: 5px; */
   text-align: center;
 }
 .divider {
@@ -184,6 +184,7 @@ nav,
 .hamburger {
   font-size: 24px;
   cursor: pointer;
+  margin-top: 2px;
 }
 .close-icon {
   display: none;
@@ -781,6 +782,7 @@ ul > li > a:hover::after {
   /* Header Section */
   .big-scr {
     display: flex;
+    align-items: center;
     color: var(--forth-clr);
     margin-left: auto;
     gap: 20px;
@@ -1014,13 +1016,15 @@ ul > li > a:hover::after {
   .nav-right > ul > li {
     margin-bottom: 20px;
   }
+  ul > li {
+    margin-bottom: 0;
+  }
 
   /* Banner Section */
   .banner-section {
     min-height: 60vh;
     padding: 20px 0;
   }
-
   .banner-img {
     max-width: 350px;
   }

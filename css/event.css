@@ -868,6 +868,7 @@ ul > li > a:hover::after {
   /* Header Section */
   .big-scr {
     display: flex;
+    align-items: center;
     color: var(--forth-clr);
     margin-left: auto;
     gap: 20px;
