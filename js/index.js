@@ -72,3 +72,8 @@ function updateSliderColor() {
 
 slider.addEventListener("input", updateSliderColor);
 updateSliderColor();
+
+
+
+
+

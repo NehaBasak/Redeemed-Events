@@ -12,6 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
@@ -50,15 +54,16 @@
                 <a href="./event.html">Events</a>
               </li>
               <li class="dropdown">
-                Resources
-                <img src="./assets/Vector (20).png" alt="" />
+                <span class="dropdown-toggle">
+                  Resources
+                  <img src="./assets/Vector (20).png" alt="" />
+                </span>
                 <ul class="dropdown-content">
                   <li><a href="./resourceabout.html">About us</a></li>
                   <li><a href="./resourceprice.html">Fees</a></li>
                   <li><a href="./resourcevideo.html">Help videos</a></li>
                 </ul>
               </li>
-              <li><a href="">Log in</a></li>
               <li class="small-scr">
                 <a class="header-search" href=""
                   ><img src="./assets/Vector (19).png" alt=""
@@ -86,7 +91,56 @@
       <div class="container">
         <div class="row">
           <div class="col-2">
-            <div class="event-main">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="event-name-img">
+                    <img src="./assets/Rectangle 40286.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="event-name-img">
+                    <img src="./assets/Rectangle 3858.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="event-name-img">
+                    <img src="./assets/Rectangle 40273 (1).png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="event-name-img">
+                    <img src="./assets/Rectangle 40277.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="small-event-img">
+                    <img src="./assets/Rectangle 40286.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="small-event-img">
+                    <img src="./assets/Rectangle 3858.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="small-event-img">
+                    <img src="./assets/Rectangle 40273 (1).png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="small-event-img">
+                    <img src="./assets/Rectangle 40277.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="event-main">
               <div data-aos="flip-left">
                 <div class="event-name-img">
                   <img src="./assets/Rectangle 40286.png" alt="" />
@@ -106,8 +160,8 @@
                   <img src="./assets/Rectangle 40290.png" alt="" />
                 </div>
               </div>
-            </div>
-          </div>
+            </div> -->
+
           <div class="col-2">
             <div class="event-date-time">
               <div class="event-date">
@@ -396,6 +450,50 @@
     </footer>
 
     <script src="./js/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-toggle").click(function (e) {
+          e.stopPropagation();
+          let content = $(this).siblings(".dropdown-content");
+          $(".dropdown-content").not(content).slideUp();
+          content.slideToggle();
+        });
+        $(document).click(function () {
+          setTimeout(function () {
+            $(".dropdown-content").slideUp();
+          }, 100);
+        });
+      });
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

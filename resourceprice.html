@@ -50,15 +50,16 @@
                 <a href="./event.html">Events</a>
               </li>
               <li class="dropdown">
-                Resources
-                <img src="./assets/Vector (20).png" alt="" />
+                <span class="dropdown-toggle">
+                  Resources
+                  <img src="./assets/Vector (20).png" alt="" />
+                </span>
                 <ul class="dropdown-content">
                   <li><a href="./resourceabout.html">About us</a></li>
                   <li><a href="./resourceprice.html">Fees</a></li>
                   <li><a href="./resourcevideo.html">Help videos</a></li>
                 </ul>
               </li>
-              <li><a href="">Log in</a></li>
               <li class="small-scr">
                 <a class="header-search" href=""
                   ><img src="./assets/Vector (19).png" alt=""
@@ -392,6 +393,24 @@
     </footer>
 
     <script src="./js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-toggle").click(function (e) {
+          e.stopPropagation();
+          let content = $(this).siblings(".dropdown-content");
+          $(".dropdown-content").not(content).slideUp();
+          content.slideToggle();
+        });
+        $(document).click(function () {
+          setTimeout(function () {
+            $(".dropdown-content").slideUp();
+          }, 100);
+        });
+      });
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
