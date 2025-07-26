@@ -180,7 +180,7 @@ nav,
   transition: all 0.5s;
 }
 .header-btn:hover {
-  color: var(--secondary-clr);
+  color: var(--secondary-clr) !important;
 }
 .hamburger {
   font-size: 1.8rem;
@@ -364,7 +364,7 @@ h2 > span {
 .event-last {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   padding-top: 30px;
 }
 .event-last > p {
@@ -372,12 +372,9 @@ h2 > span {
   font-size: 16px;
   font-family: Open Sans;
 }
-.event-last-img {
-  max-width: 15px;
-}
 .event-last-img > img {
-  width: 100%;
-  height: 100%;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
@@ -556,6 +553,7 @@ h2 > span {
   outline: none;
   width: 250px;
   background-color: transparent;
+  color: var(--forth-clr);
 }
 .email-form .header-btn {
   padding: 10px 20px;

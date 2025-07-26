@@ -180,7 +180,7 @@ nav,
   transition: all 0.5s;
 }
 .header-btn:hover {
-  color: var(--secondary-clr);
+  color: var(--secondary-clr) !important;
 }
 .hamburger {
   font-size: 1.8rem;
@@ -612,6 +612,7 @@ h2 > span {
   outline: none;
   width: 250px;
   background-color: transparent;
+  color: var(--forth-clr);
 }
 .email-form .header-btn {
   padding: 10px 20px;

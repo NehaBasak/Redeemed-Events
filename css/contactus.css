@@ -179,7 +179,7 @@ nav,
   transition: all 0.5s;
 }
 .header-btn:hover {
-  color: var(--secondary-clr);
+  color: var(--secondary-clr) !important;
 }
 .hamburger {
   font-size: 1.8rem;
@@ -361,6 +361,7 @@ form button:hover {
   width: 250px;
   background-color: transparent;
   margin-bottom: 0;
+  color: var(--forth-clr);
 }
 .email-form .header-btn {
   padding: 10px 20px;
