@@ -229,9 +229,7 @@ nav,
 .main-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 20px;
+  justify-content: space-between;
 }
 .card {
   width: 360px;
@@ -240,6 +238,7 @@ nav,
   overflow: hidden;
   border: 1px solid #333;
   padding: 10px;
+  margin-bottom: 15px;
 }
 .card img {
   width: 100%;
@@ -570,6 +569,10 @@ ul > li > a:hover::after {
   .latest-section {
     padding: 40px 0;
   }
+  .main-box {
+    justify-content: center;
+    gap: 10px;
+  }
 
   /* Flote Box Section */
   .flote-section {
@@ -631,6 +634,9 @@ ul > li > a:hover::after {
   .nav-right > ul > li {
     margin-bottom: 20px;
   }
+  .nav-right {
+    width: 100vw;
+  }
   .dropdown ul > li {
     margin-bottom: 0;
   }
@@ -641,6 +647,12 @@ ul > li > a:hover::after {
   }
   .latest-section h2 {
     font-size: 25px;
+  }
+  .main-box {
+    gap: 0px;
+  }
+  .card {
+    margin-bottom: 10px;
   }
   .card .date {
     font-size: 12px;

@@ -639,7 +639,6 @@ h2 > span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px;
 }
 .trending-box {
   max-width: 340px;
@@ -647,6 +646,7 @@ h2 > span {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+  padding-bottom: 10px;
 }
 .swiper-pagination-bullet {
   width: 20px !important;
@@ -1083,6 +1083,9 @@ ul > li > a:hover::after {
   .nav-right > ul > li {
     margin-bottom: 20px;
   }
+    .nav-right{
+    width: 100vw;
+  }
   .dropdown ul > li {
     margin-bottom: 0;
   }
@@ -1267,9 +1270,6 @@ ul > li > a:hover::after {
   .our-slider-section {
     padding-top: 20px;
     padding-bottom: 0;
-  }
-  .main-box {
-    gap: 10px;
   }
   .our-slider-section h2 {
     font-size: 25px;

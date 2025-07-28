@@ -1034,6 +1034,9 @@ ul > li > a:hover::after {
   .nav-right > ul > li {
     margin-bottom: 20px;
   }
+  .nav-right {
+    width: 100vw;
+  }
   .dropdown ul > li {
     margin-bottom: 0;
   }
@@ -1176,11 +1179,16 @@ ul > li > a:hover::after {
     padding: 20px 0;
   }
   .simple-img {
-    max-width: 375px;
+    max-width: 320px;
   }
   .simple-sub-img {
-    display: none;
+    max-width: 150px;
+    position: absolute;
+    top: calc(200px / 2);
+    right:50%;
+    transform: translateX(-50%);
   }
+
   .simple-text h2 {
     font-size: 25px;
   }

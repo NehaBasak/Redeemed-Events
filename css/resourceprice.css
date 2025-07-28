@@ -252,13 +252,13 @@ h2 > span {
   z-index: 1;
   margin-top: 2px;
 }
-.dropdown-option a {
+.dropdown-option >div {
   color: var(--primary-clr);
   padding: 10px 15px;
   text-decoration: none;
   display: block;
 }
-.dropdown-option a:hover {
+.dropdown-option >div:hover {
   background-color: var(--third-clr);
   color: var(--forth-clr);
 }
@@ -947,6 +947,9 @@ ul > li > a:hover::after {
   }
   .nav-right > ul > li {
     margin-bottom: 20px;
+  }
+    .nav-right{
+    width: 100vw;
   }
   .dropdown ul > li {
     margin-bottom: 0;

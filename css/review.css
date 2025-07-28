@@ -754,6 +754,9 @@ ul > li > a:hover::after {
   .nav-right > ul > li {
     margin-bottom: 20px;
   }
+    .nav-right{
+    width: 100vw;
+  }
   .dropdown ul > li {
     margin-bottom: 0;
   }
